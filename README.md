@@ -1,2 +1,2 @@
 # awed-spatial-temporal
-For the patio-temporal analysis of the VCD data
+For the spatio-temporal analysis of the VCD data
