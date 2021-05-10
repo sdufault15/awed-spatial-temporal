@@ -28,3 +28,13 @@ vignettes/*.pdf
 .Renviron
 awed-spatial-temporal.Rproj
 sandbox
+ETH_Adm1_shapefile
+fwdtaustatisticforspatialclustering
+manuscript
+yogya-shape-files
+gadm36_BFA_1_sp.rds
+gadm36_ETH_1_sp.rds
+gadm36_IDN_1_sp.rds
+gadm36_IND_1_sp.rds
+gadm36_NAM_0_sp.rds
+data
