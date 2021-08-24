@@ -1,23 +1,40 @@
-# awed-spatial-temporal
-For the spatio-temporal analysis of the VCD data
+# Disruption of spatiotemporal dependence in dengue transmission by wMel Wolbachia in Yogyakarta, Indonesia
 
-`munge`
+This repository holds all of the code necessary to recreate the analysis performed in the paper by the same name. The code has not been optimized, but should accurately return the results described in the paper.
+
+
+## Organization of this Repository
+This repository is organized as follows. Note: the data is not available in this repository. 
+
+### `munge`
+
+Contains all of the scripts that run the analyses on the raw data and return the results.
+
 + `overall-bootstrap-script.R` calls the following functions to run tau for the study area, naive to intervention designation. Significance is determined as the result of bootstrap resampling.
    + `lib/bootstrap-function_odds.R`
    + `lib/binary-matrix-function_odds.R`
+   + Output: `data/overall-bootstrap-output.RData` 
    
 + `overall-permutation-script.R` calls the following functions to run tau for the study area, naive to intervention designation. Significance is determined as compared to the 95% confidence intervals on the permutation-based null distribution.
    + `lib/permutation-function.R`
    + `lib/binary-matrix-function_odds.R`
+   +  Output: `data/overall-permutation-output.RData`
    
 + `cluster-specific-permutation-script.R` calls the following functions to run tau at the cluster level. Significance is determined as compared to the 95% confidence intervals on the permutation-based null distribution.
    + `lib/permutation-function.R`
    + `lib/binary-matrix-function_odds.R`
+   + Output: `data/cluster-specific-permutation-output.RData`
    
 + `cluster-specific-spatial-permutation-sensitivity-script.R` and `cluster-specific-temporal-sensitivity-script.R` call on the following functions to run the sensitivity checks. Significance is determined as compared to the 95% confidence intervals on the permutation-based null distribution.
    + `lib/permutation-function.R`
    + `lib/binary-matrix-function_odds.R`
+   + Output: `data/cluster-specific-permutation-output-temporal-sensitivity.RData`
+   + Output: `data/cluster-specific-permutation-output-sensitivity-d50.RData`
+   
+### `analysis`
+Turns the output from `munge` into the tables and figures presented in the article.
 
+### `graphs`
 
 Figures were generated with the following files:
 
