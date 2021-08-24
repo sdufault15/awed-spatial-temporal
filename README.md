@@ -1,6 +1,23 @@
 # awed-spatial-temporal
 For the spatio-temporal analysis of the VCD data
 
+`munge`
++ `overall-bootstrap-script.R` calls the following functions to run tau for the study area, naive to intervention designation. Significance is determined as the result of bootstrap resampling.
+   + `lib/bootstrap-function_odds.R`
+   + `lib/binary-matrix-function_odds.R`
+   
++ `overall-permutation-script.R` calls the following functions to run tau for the study area, naive to intervention designation. Significance is determined as compared to the 95% confidence intervals on the permutation-based null distribution.
+   + `lib/permutation-function.R`
+   + `lib/binary-matrix-function_odds.R`
+   
++ `cluster-specific-permutation-script.R` calls the following functions to run tau at the cluster level. Significance is determined as compared to the 95% confidence intervals on the permutation-based null distribution.
+   + `lib/permutation-function.R`
+   + `lib/binary-matrix-function_odds.R`
+   
++ `cluster-specific-spatial-permutation-sensitivity-script.R` and `cluster-specific-temporal-sensitivity-script.R` call on the following functions to run the sensitivity checks. Significance is determined as compared to the 95% confidence intervals on the permutation-based null distribution.
+   + `lib/permutation-function.R`
+   + `lib/binary-matrix-function_odds.R`
+
 
 Figures were generated with the following files:
 
