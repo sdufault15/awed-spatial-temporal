@@ -265,3 +265,17 @@ ggsave(filename = here("graphs",
        height = 8,
        width = 9,
        units = "in")
+
+### Generating processed data
+
+fp_perm_mean %>% 
+  rename(`Geom Mean LL` = LL, `Geom Mean UL` = UL) %>% 
+  full_join(perm_c) %>% 
+  mutate(cluster = factor(cluster, levels = 1:24)) %>% 
+  arrange(intervention, r_upper, cluster) %>% 
+  dplyr::select(intervention, r_lower, r_upper, cluster, tau_obs, 
+                UL, LL, geom_mean_1, `Geom Mean LL`,`Geom Mean UL`) %>% 
+  write.csv(file = here("graphs", paste0("processed-data/", Sys.Date(), "_fig4-data.csv")),
+            row.names = FALSE)
+  
+  
