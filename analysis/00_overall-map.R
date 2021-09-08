@@ -142,3 +142,11 @@ tmap_save(tm = all,
           width = 17.5,
           height = 7.5,
           units = "in")
+
+### Processed data
+tpf %>% 
+  rename(Cluster = New_Clustr) %>% 
+  dplyr::select(Cluster, `Test-positive fraction`) %>% 
+  arrange(Cluster) %>% 
+  write.csv(file = here("graphs", paste0("processed-data/", Sys.Date(), "_fig2B-data.csv")),
+            row.names = FALSE)
