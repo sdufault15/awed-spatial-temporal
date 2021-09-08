@@ -151,3 +151,23 @@ bind_cols(t1,t2) %>%
   kable_styling() %>% 
   footnote(number = c("Distance intervals (0, d<sub>2</sub>)", "Distance intervals (d<sub>2</sub> - 100, d<sub>2</sub>)"),
            escape = F)
+
+
+### Processed data:
+perm_c %>% 
+  rename(perm.tau = tau) %>% 
+  group_by(r_upper) %>% 
+  mutate(LB = quantile(perm.tau, probs = 0.025, na.rm = TRUE),
+         UB = quantile(perm.tau, probs = 0.975, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  dplyr::select(r_lower, r_upper, LB, UB) %>% 
+  distinct() %>% 
+  full_join(output$observed_concentric) %>%
+  dplyr::select(r_lower, r_upper, tau, LB, UB) %>% 
+  full_join(cis_c, by = c("r_lower", "r_upper")) %>% 
+  filter(r_upper <= 1000) %>% 
+  dplyr::select(d1 = r_lower, d2 = r_upper, tau, 
+                `Bootstrap CI.l` = CI.l, `Bootstrap CI.u` = CI.u, 
+                `Perm Null CI.l` = LB, `Perm Null CI.u` = UB) %>% 
+  write.csv(file = here("graphs", paste0("processed-data/", Sys.Date(), "_fig3-data.csv")),
+            row.names = FALSE)
