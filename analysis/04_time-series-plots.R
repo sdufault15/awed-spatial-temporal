@@ -92,5 +92,14 @@ ggsave(filename = here("graphs", paste0(Sys.Date(), "_time-series-plot-serotypes
        width = 8.75,
        height = 8,
        units = "in")
-       
+
+### Processed data
+work_ts_spat %>% 
+ # filter(serotype == "test-negative control") %>% 
+  group_by(date = as.Date(cut(illness_onset, "month")), intervention = as.factor(intervention), serotype) %>% 
+  arrange(date, intervention, serotype) %>%
+  summarise(`Counts (monthly)` = n_distinct(participant_id)) %>% 
+  mutate(intervention = ifelse(intervention == 0, "Untreated", "Intervention")) %>% 
+  write.csv(file = here("graphs", paste0("processed-data/", Sys.Date(), "_fig1-data.csv")),
+            row.names = FALSE)
        

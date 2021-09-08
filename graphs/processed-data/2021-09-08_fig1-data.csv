@@ -1,0 +1,172 @@
+"date","intervention","serotype","Counts (monthly)"
+2018-01-01,"Untreated","denv4",1
+2018-01-01,"Untreated","test-negative control",86
+2018-01-01,"Intervention","denv1",1
+2018-01-01,"Intervention","test-negative control",72
+2018-02-01,"Untreated","test-negative control",98
+2018-02-01,"Intervention","test-negative control",61
+2018-03-01,"Untreated","denv1",3
+2018-03-01,"Untreated","test-negative control",134
+2018-03-01,"Untreated","unk_serotype",2
+2018-03-01,"Intervention","denv3",1
+2018-03-01,"Intervention","test-negative control",119
+2018-03-01,"Intervention","unk_serotype",1
+2018-04-01,"Untreated","denv1",1
+2018-04-01,"Untreated","denv2",2
+2018-04-01,"Untreated","denv4",1
+2018-04-01,"Untreated","test-negative control",85
+2018-04-01,"Untreated","unk_serotype",2
+2018-04-01,"Intervention","denv1",1
+2018-04-01,"Intervention","denv2",1
+2018-04-01,"Intervention","test-negative control",81
+2018-05-01,"Untreated","denv3",1
+2018-05-01,"Untreated","denv4",3
+2018-05-01,"Untreated","test-negative control",69
+2018-05-01,"Intervention","test-negative control",55
+2018-05-01,"Intervention","unk_serotype",1
+2018-06-01,"Untreated","denv2",1
+2018-06-01,"Untreated","denv4",1
+2018-06-01,"Untreated","test-negative control",32
+2018-06-01,"Intervention","denv2",1
+2018-06-01,"Intervention","test-negative control",29
+2018-07-01,"Untreated","test-negative control",52
+2018-07-01,"Untreated","unk_serotype",3
+2018-07-01,"Intervention","test-negative control",57
+2018-08-01,"Untreated","denv4",1
+2018-08-01,"Untreated","test-negative control",80
+2018-08-01,"Intervention","test-negative control",68
+2018-09-01,"Untreated","test-negative control",5
+2018-09-01,"Intervention","test-negative control",9
+2018-10-01,"Untreated","test-negative control",145
+2018-10-01,"Untreated","unk_serotype",1
+2018-10-01,"Intervention","test-negative control",128
+2018-10-01,"Intervention","unk_serotype",1
+2018-11-01,"Untreated","denv2",1
+2018-11-01,"Untreated","test-negative control",127
+2018-11-01,"Intervention","test-negative control",106
+2018-12-01,"Untreated","denv2",1
+2018-12-01,"Untreated","test-negative control",78
+2018-12-01,"Untreated","unk_serotype",1
+2018-12-01,"Intervention","denv4",1
+2018-12-01,"Intervention","test-negative control",105
+2019-01-01,"Untreated","denv1",3
+2019-01-01,"Untreated","denv2",7
+2019-01-01,"Untreated","denv3",1
+2019-01-01,"Untreated","denv4",7
+2019-01-01,"Untreated","test-negative control",228
+2019-01-01,"Untreated","unk_serotype",3
+2019-01-01,"Intervention","denv2",1
+2019-01-01,"Intervention","denv4",2
+2019-01-01,"Intervention","test-negative control",187
+2019-01-01,"Intervention","unk_serotype",2
+2019-02-01,"Untreated","denv1",1
+2019-02-01,"Untreated","denv2",23
+2019-02-01,"Untreated","denv4",4
+2019-02-01,"Untreated","test-negative control",251
+2019-02-01,"Untreated","unk_serotype",3
+2019-02-01,"Intervention","denv1",1
+2019-02-01,"Intervention","denv2",1
+2019-02-01,"Intervention","denv4",1
+2019-02-01,"Intervention","test-negative control",225
+2019-02-01,"Intervention","unk_serotype",2
+2019-03-01,"Untreated","denv1",10
+2019-03-01,"Untreated","denv2",27
+2019-03-01,"Untreated","denv3",3
+2019-03-01,"Untreated","denv4",4
+2019-03-01,"Untreated","test-negative control",233
+2019-03-01,"Untreated","unk_serotype",2
+2019-03-01,"Intervention","denv2",3
+2019-03-01,"Intervention","denv4",1
+2019-03-01,"Intervention","test-negative control",234
+2019-04-01,"Untreated","denv1",5
+2019-04-01,"Untreated","denv2",19
+2019-04-01,"Untreated","denv3",1
+2019-04-01,"Untreated","denv4",6
+2019-04-01,"Untreated","test-negative control",158
+2019-04-01,"Untreated","unk_serotype",7
+2019-04-01,"Intervention","denv1",2
+2019-04-01,"Intervention","denv2",4
+2019-04-01,"Intervention","denv4",1
+2019-04-01,"Intervention","test-negative control",145
+2019-04-01,"Intervention","unk_serotype",1
+2019-05-01,"Untreated","denv1",7
+2019-05-01,"Untreated","denv2",23
+2019-05-01,"Untreated","denv3",5
+2019-05-01,"Untreated","denv4",4
+2019-05-01,"Untreated","test-negative control",124
+2019-05-01,"Untreated","unk_serotype",13
+2019-05-01,"Intervention","denv1",2
+2019-05-01,"Intervention","denv2",4
+2019-05-01,"Intervention","denv4",1
+2019-05-01,"Intervention","test-negative control",93
+2019-05-01,"Intervention","unk_serotype",1
+2019-06-01,"Untreated","denv1",1
+2019-06-01,"Untreated","denv2",1
+2019-06-01,"Untreated","denv4",1
+2019-06-01,"Untreated","test-negative control",46
+2019-06-01,"Untreated","unk_serotype",3
+2019-06-01,"Intervention","denv1",1
+2019-06-01,"Intervention","denv2",2
+2019-06-01,"Intervention","denv4",2
+2019-06-01,"Intervention","test-negative control",32
+2019-06-01,"Intervention","unk_serotype",1
+2019-07-01,"Untreated","denv2",7
+2019-07-01,"Untreated","denv4",2
+2019-07-01,"Untreated","test-negative control",72
+2019-07-01,"Untreated","unk_serotype",1
+2019-07-01,"Intervention","denv1",1
+2019-07-01,"Intervention","test-negative control",46
+2019-08-01,"Untreated","denv1",2
+2019-08-01,"Untreated","denv4",3
+2019-08-01,"Untreated","test-negative control",103
+2019-08-01,"Untreated","unk_serotype",1
+2019-08-01,"Intervention","denv4",2
+2019-08-01,"Intervention","test-negative control",122
+2019-08-01,"Intervention","unk_serotype",1
+2019-09-01,"Untreated","denv1",1
+2019-09-01,"Untreated","denv3",1
+2019-09-01,"Untreated","denv4",1
+2019-09-01,"Untreated","test-negative control",115
+2019-09-01,"Untreated","unk_serotype",2
+2019-09-01,"Intervention","test-negative control",93
+2019-10-01,"Untreated","test-negative control",168
+2019-10-01,"Untreated","unk_serotype",1
+2019-10-01,"Intervention","test-negative control",121
+2019-11-01,"Untreated","denv2",1
+2019-11-01,"Untreated","test-negative control",146
+2019-11-01,"Intervention","test-negative control",144
+2019-12-01,"Untreated","denv2",2
+2019-12-01,"Untreated","denv3",1
+2019-12-01,"Untreated","test-negative control",106
+2019-12-01,"Intervention","denv1",1
+2019-12-01,"Intervention","test-negative control",117
+2020-01-01,"Untreated","denv1",5
+2020-01-01,"Untreated","denv2",3
+2020-01-01,"Untreated","denv4",7
+2020-01-01,"Untreated","test-negative control",130
+2020-01-01,"Untreated","unk_serotype",1
+2020-01-01,"Intervention","denv1",1
+2020-01-01,"Intervention","denv2",2
+2020-01-01,"Intervention","denv3",4
+2020-01-01,"Intervention","denv4",1
+2020-01-01,"Intervention","test-negative control",165
+2020-01-01,"Intervention","unk_serotype",2
+2020-02-01,"Untreated","denv1",5
+2020-02-01,"Untreated","denv2",15
+2020-02-01,"Untreated","denv3",7
+2020-02-01,"Untreated","denv4",16
+2020-02-01,"Untreated","test-negative control",128
+2020-02-01,"Untreated","unk_serotype",4
+2020-02-01,"Intervention","denv1",1
+2020-02-01,"Intervention","denv2",1
+2020-02-01,"Intervention","denv4",4
+2020-02-01,"Intervention","test-negative control",137
+2020-02-01,"Intervention","unk_serotype",1
+2020-03-01,"Untreated","denv1",1
+2020-03-01,"Untreated","denv2",1
+2020-03-01,"Untreated","denv3",2
+2020-03-01,"Untreated","denv4",8
+2020-03-01,"Untreated","test-negative control",84
+2020-03-01,"Untreated","unk_serotype",3
+2020-03-01,"Intervention","denv4",1
+2020-03-01,"Intervention","test-negative control",87
