@@ -48,7 +48,7 @@ Figures were generated with the following files:
    + `analysis/02_overall-analysis.R`
    
 + **Figure 4.** Cluster-specific and pooled arm-level estimates of the $\tau$-statistic (points) and 95\% CIs on the null distribution (error bar) generated from 1,000 simulations, where the location at which a case occurs is randomly reassigned within each cluster. Each panel displays the estimated spatial dependence for homotypic case pairs with illness onset occurring within 30 days and resident within a given distance interval (meters) from each other . Statistically significant dependence is present when the point estimate falls outside of the 95\% CIs of the null distribution and, for improved visibility, is marked by the light blue points. The overall point estimate for each trial arm is found by taking the geometric mean of the cluster-level estimates and is then compared against the 95\% CIs of the null distribution of the permuted geometric mean.   
-   + `analysis/03_arm-specific-analyses.R`
+   + `analysis/07_cluster-permutation-analyses.R`
    
 + **Figure 5.** Residential locations of the enrolled serotyped dengue cases involved in homotypic pairs with residences within 300m and illness onset within 30 days, including pairs that cross cluster boundaries.   
    + `analysis/10_homotypic-vcd-maps.R`
