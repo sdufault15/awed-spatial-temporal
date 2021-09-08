@@ -4,7 +4,7 @@ This repository holds all of the code necessary to recreate the analysis perform
 
 
 ## Organization of this Repository
-This repository is organized as follows. Note: the data is not available in this repository. 
+This repository is organized as follows. Note: the raw data is not available in this repository. However, the data necessary to recreate most of the figures (excluding those relying on geolocated residence) is available in the `graphs` folder.
 
 ### `munge`
 
