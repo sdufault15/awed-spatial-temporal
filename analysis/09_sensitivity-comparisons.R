@@ -280,3 +280,8 @@ ggsave(filename = here("graphs",
        width = 8.5,
        height = 6,
        units = "in")
+
+### Processed data
+all_comp %>% 
+  write.csv(file = here("graphs", paste0("processed-data/", Sys.Date(), "_fig6-data.csv")),
+            row.names = FALSE)
