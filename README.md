@@ -52,3 +52,7 @@ Figures were generated with the following files:
    
 + **Figure 5.** Residential locations of the enrolled serotyped dengue cases involved in homotypic pairs with residences within 300m and illness onset within 30 days, including pairs that cross cluster boundaries.   
    + `analysis/10_homotypic-vcd-maps.R`
+   
++ **Figure 6.** Sensitivity analyses and comparison with the primary analysis (‘Full data’). Estimated geometric mean odds ratio, $\tau$, comparing the odds of a homotypic dengue case pair within the distance interval $(d_1, d_2)$ versus the odds of a homotypic dengue case pair at any distance across the entire study area for 1) the full dataset, 2) the dataset excluding those within 50m of a cluster border, 3) participant pairs with illness
+onset occurring within 1 week of each other, and 4) participant pairs with illness onset occurring within 2 weeks of each other. The shaded area is the 95% CI of the permutation-based null distribution.
+   + `analysis/09_sensitivity-comparisons.R`
