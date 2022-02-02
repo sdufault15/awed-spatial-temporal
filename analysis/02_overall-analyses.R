@@ -26,8 +26,9 @@ p1 <- output$observed_radii %>%
   ggplot(aes(x = r_upper, y = tau)) + 
   geom_hline(yintercept = 1,
              lty = 2) + 
-  geom_ribbon(aes(ymin = CI.l, ymax = CI.u), alpha = 0.3) + 
-  geom_line() +
+  # geom_ribbon(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) + 
+  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) +
+  geom_point() +
   theme_pubr() + 
   scale_x_continuous(TeX("Distance (m), d_2"),
                      breaks = seq(0,1000,by = 100),
@@ -47,8 +48,10 @@ p2 <- output$observed_concentric %>%
   ggplot(aes(x = r_upper, y = tau)) + 
   geom_hline(yintercept = 1,
              lty = 2) + 
-  geom_ribbon(aes(ymin = CI.l, ymax = CI.u), alpha = 0.3) + 
-  geom_line() +
+  # geom_ribbon(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) + 
+  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) +
+  # geom_line() +
+  geom_point() + 
   theme_pubr() + 
   scale_x_continuous(TeX("Distance (m), d_2"),
                      breaks = seq(0,1000,by = 100),
@@ -98,9 +101,11 @@ p3 <- perm_c %>%
   distinct() %>% 
   full_join(output$observed_concentric) %>% 
   ggplot(aes(x = r_upper, y = tau)) + 
-  geom_line() + 
-  geom_ribbon(aes(ymin = LB, ymax = UB),
-              alpha = 0.3) + 
+  # geom_line() + 
+  geom_point() +
+  # geom_ribbon(aes(ymin = LB, ymax = UB),
+  #             alpha = 0.5) + 
+  geom_errorbar(aes(ymin = LB, ymax = UB), alpha = 0.5) +
   geom_hline(yintercept = 1, lty = 2) + 
   scale_x_continuous(TeX("Distance (m), d_2"),
                      breaks = seq(0,1000,by = 100),
