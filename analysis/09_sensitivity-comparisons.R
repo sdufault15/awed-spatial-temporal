@@ -1,5 +1,6 @@
 library(tidyverse)
 library(here)
+library(geodist)
 library(ggpubr)
 library(latex2exp)
 load(here("data","cluster-specific-permutation-output.RData"))
@@ -239,9 +240,11 @@ p1_int <- all_comp %>%
              ncol = 4) +
   geom_hline(yintercept = 1,
              lty=2) +
-  geom_line() +
-  geom_ribbon(aes(ymin = CI.l, ymax = CI.u),
-              alpha = 0.3) +
+  # geom_line() +
+  geom_point() +
+  # geom_ribbon(aes(ymin = CI.l, ymax = CI.u),
+  #             alpha = 0.3) +
+  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) + 
   coord_cartesian(ylim = c(0,5)) +
   ylab(TeX("Odds ratio ($\\tau)")) +
   scale_x_continuous(TeX("Distance (m), $d_2"),
@@ -258,9 +261,12 @@ p1_unt <- all_comp %>%
              ncol = 4) +
   geom_hline(yintercept = 1,
              lty=2) +
-  geom_line() +
-  geom_ribbon(aes(ymin = CI.l, ymax = CI.u),
-              alpha = 0.3) +
+  # geom_line() +
+  geom_point() + 
+  # geom_ribbon(aes(ymin = CI.l, ymax = CI.u),
+  #             alpha = 0.3) +
+  geom_errorbar(aes(ymin = CI.l, ymax = CI.u),
+                alpha = 0.5) +
   coord_cartesian(ylim = c(0,5)) +
   ylab(TeX("Odds ratio ($\\tau)")) +
   scale_x_continuous(TeX("Distance (m), $d_2"),
