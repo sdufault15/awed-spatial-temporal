@@ -111,7 +111,7 @@ p3 <- perm_c %>%
                      breaks = seq(0,1000,by = 100),
                      labels = seq(0,1000,by = 100)) + 
   coord_cartesian(xlim = c(50,1000),
-                  ylim = c(0,10)) +
+                  ylim = c(0,18)) +
   scale_y_continuous(TeX("$\\tau_{overall} = \\frac{\\hat{\\theta}(d_1,d_2)}{\\hat{\\theta}(0,\\infty)}")) + 
   theme_pubr()
 
