@@ -184,7 +184,7 @@ m300 <- tm_shape(Yogya_Adm_1) +
                 shape = df_col_sero$sero.shape[1:4],
                 labels = df_col_sero$serotype[1:4],
                 size = 0.8) +
-  tm_scale_bar(breaks = c(0,.5,1), text.size = 0.9, position = c("left", "top")) +
+  tm_scale_bar(breaks = c(0,.5,1), text.size = 0.9, position = c("right", "bottom")) +
   tm_layout(legend.outside = TRUE,
             legend.outside.position = "right",
             legend.outside.size = 0.25,
