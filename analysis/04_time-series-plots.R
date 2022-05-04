@@ -74,7 +74,7 @@ p3 <- work_ts_spat %>%
                                    vjust = 0,
                                    color = "black"),
         axis.text.y = element_text(color = "black"),
-        axis.title.x = element_blank(),
+        # axis.title.x = element_blank(),
         axis.text = element_text(size = 12),
         axis.title = element_text(size = 12),
         legend.text = element_text(size = 10),
