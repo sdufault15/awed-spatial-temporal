@@ -7,7 +7,7 @@ load(here("data","2020-12-08_work-ts-spat.RData"))
 library(rgdal)
 library(raster)
 library(sp)
-Yogya_Adm_1 <- readOGR("~/Box/2019-Research/WMP/CR-TND/awed-spatial-temporal/yogya-shape-files/", "Yk_CaseControl_20160512")
+Yogya_Adm_1 <- readOGR("~/Library/CloudStorage/Box-Box/2019-Research/WMP/CR-TND/awed-spatial-temporal/yogya-shape-files/", "Yk_CaseControl_20160512")
 df_col_sero <- data.frame(serotype = c(paste0("DENV", 1:4), "Unknown", "Test-negative"),
                           sero.color = c("#0AA4D1", "#F3C73E", "#EF7822", "#76C1A8", "#003D58", "gray"),
                           sero.shape = c(21:24, 4, 25))
