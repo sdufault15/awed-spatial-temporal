@@ -16,8 +16,8 @@ p1 <- work_ts_spat %>%
   # geom_point() + 
   geom_line(aes(group = intervention, lty = intervention),
             size = 0.75,
-            col = "black",
-            alpha = 0.8) + 
+            col = "black") +#,
+            # alpha = 0.8) + 
   # scale_color_manual(values = sero_col[c(1,4)],#wes_palette("Zissou1")[c(5,1)],
   #                    breaks = c("0", "1"),
   #                    labels = c("Untreated", "Intervention")) +
@@ -87,10 +87,11 @@ ggpubr::ggarrange(p1, p3,
                   ncol = 1,
                   heights = c(1,1.5),
                   labels = c("A", "B"))
-ggsave(filename = here("graphs", paste0(Sys.Date(), "_time-series-plot-serotypes.png")),
-       device = "png",
+ggsave(filename = here("graphs", paste0(Sys.Date(), "_time-series-plot-serotypes.eps")),
+       device = "eps",
        width = 8.75,
        height = 8,
+       dpi = 300,
        units = "in")
 
 ### Processed data

@@ -21,7 +21,7 @@ work_ts_spat <- work_ts_spat %>%
          intervention = ifelse(intervention == 0, "Untreated", "Intervention")) %>% 
   full_join(df_col_sero) 
 
-Yogya_Adm_1 <- readOGR("~/Box/2019-Research/WMP/CR-TND/awed-spatial-temporal/yogya-shape-files/", "Yk_CaseControl_20160512")
+Yogya_Adm_1 <- readOGR("~/Library/CloudStorage/Box-Box/2019-Research/WMP/CR-TND/awed-spatial-temporal/yogya-shape-files/", "Yk_CaseControl_20160512")
 int_assignment <- work_ts_spat %>% 
   dplyr::select(cluster, Intervention = intervention) %>% 
   distinct() %>% 
@@ -107,41 +107,43 @@ CaseControl_ppp <- ppp(work_ts_spat$longitude, work_ts_spat$latitude,
 risk_est <-  relrisk(CaseControl_ppp, relative = FALSE) 
 
 risk_raster <- raster(risk_est, crs = crs(Yogya_Adm_1))
-risk_raster_2 <- mask(risk_raster, Yogya_Adm_1)
+risk_raster_2 <- mask(x = risk_raster, mask = Yogya_Adm_1)
+
 p_rr <- tm_shape(Yogya_Adm_1) +
   tm_borders() +
   tm_shape(risk_raster_2) +
   tm_raster(title = "Test-positive fraction",
             style = "fixed",
-            breaks = c(0,0.05,0.1,0.15,0.2)) +
+            breaks = c(0,0.05,0.1,0.15,0.2),
+            colorNA = "white",
+            showNA = FALSE) +
   tm_shape(CRTND_VCD_data_SPDF) +
   tm_dots(#shape = "intervention",
     col = "black",
     shape = 3,
-    alpha = 0.7,
+    # alpha = 0.7,
     size = 0.05) +
   tm_shape(Yogya_Adm_1) +
   tm_text("Intervention",
           size = 0.7) +
   tm_borders() +
-  tm_layout(#legend.outside = TRUE,
-            # legend.outside.position = "right",
-            # legend.outside.size = 0.25
+  tm_layout(bg.color = "white",
             legend.text.size = 0.9,
             legend.title.size = 1,
-            # legend.title.color = "white",
             inner.margins = 0.1,
             title = "C",
             title.fontface = "bold") +
-  tm_scale_bar(breaks = c(0,.50,1.00), text.size = 0.9, position = c("left", "top")) 
+  tm_scale_bar(breaks = c(0,.50,1.00), text.size = 0.9, position = c("left", "top"))
 
 all <- tmap_arrange(map_dots, map_tpf, p_rr)
 
 tmap_save(tm = all,
-          filename = here("graphs", paste0(Sys.Date(), "_overall-denv-tmap.png")),
+          filename = here("graphs", paste0(Sys.Date(), "_overall-denv-tmap.eps")),
           width = 17.5,
           height = 7.5,
+          dpi = 600,
           units = "in")
+
 
 ### Processed data
 tpf %>% 

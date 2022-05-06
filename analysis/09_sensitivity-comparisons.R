@@ -240,11 +240,9 @@ p1_int <- all_comp %>%
              ncol = 4) +
   geom_hline(yintercept = 1,
              lty=2) +
-  # geom_line() +
+  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), 
+                col = "darkgray") + 
   geom_point() +
-  # geom_ribbon(aes(ymin = CI.l, ymax = CI.u),
-  #             alpha = 0.3) +
-  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) + 
   coord_cartesian(ylim = c(0,5)) +
   ylab(TeX("Odds ratio ($\\tau)")) +
   scale_x_continuous(TeX("Distance (m), $d_2"),
@@ -261,12 +259,9 @@ p1_unt <- all_comp %>%
              ncol = 4) +
   geom_hline(yintercept = 1,
              lty=2) +
-  # geom_line() +
-  geom_point() + 
-  # geom_ribbon(aes(ymin = CI.l, ymax = CI.u),
-  #             alpha = 0.3) +
   geom_errorbar(aes(ymin = CI.l, ymax = CI.u),
-                alpha = 0.5) +
+                col = "darkgray") +
+  geom_point() + 
   coord_cartesian(ylim = c(0,5)) +
   ylab(TeX("Odds ratio ($\\tau)")) +
   scale_x_continuous(TeX("Distance (m), $d_2"),
@@ -281,10 +276,11 @@ ggarrange(p1_int,
           align = "v")
 ggsave(filename = here("graphs",
                        paste0(Sys.Date(),
-                              "_sensitivity-comparison-line-plot.png")),
-       device = "png",
+                              "_sensitivity-comparison-line-plot.eps")),
+       device = "eps",
        width = 8.5,
        height = 6,
+       dpi = 300,
        units = "in")
 
 ### Processed data

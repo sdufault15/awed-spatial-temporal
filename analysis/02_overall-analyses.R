@@ -27,7 +27,7 @@ p1 <- output$observed_radii %>%
   geom_hline(yintercept = 1,
              lty = 2) + 
   # geom_ribbon(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) + 
-  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) +
+  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), col = "darkgray") +
   geom_point() +
   theme_pubr() + 
   scale_x_continuous(TeX("Distance (m), d_2"),
@@ -49,7 +49,7 @@ p2 <- output$observed_concentric %>%
   geom_hline(yintercept = 1,
              lty = 2) + 
   # geom_ribbon(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) + 
-  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), alpha = 0.5) +
+  geom_errorbar(aes(ymin = CI.l, ymax = CI.u), col = "darkgray") +
   # geom_line() +
   geom_point() + 
   theme_pubr() + 
@@ -67,24 +67,27 @@ ggpubr::ggarrange(p1, p2,
                   labels = "AUTO",
                   align = "hv")
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-dual-plot.png")),
-       device = "png",
+                       paste0(Sys.Date(), "_overall-tau-dual-plot.eps")),
+       device = "eps",
+       dpi = 300,
        width = 6,
        height = 6,
        units = "in")
 
 p2
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-concentric-plot.png")),
-       device = "png",
+                       paste0(Sys.Date(), "_overall-tau-concentric-plot.eps")),
+       device = "eps",
+       dpi = 300,
        width = 6,
        height = 4,
        units = "in")
 
 p1
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-radii-plot.png")),
-       device = "png",
+                       paste0(Sys.Date(), "_overall-tau-radii-plot.eps")),
+       device = "eps",
+       dpi = 300,
        width = 6,
        height = 4,
        units = "in")
@@ -102,10 +105,10 @@ p3 <- perm_c %>%
   full_join(output$observed_concentric) %>% 
   ggplot(aes(x = r_upper, y = tau)) + 
   # geom_line() + 
-  geom_point() +
   # geom_ribbon(aes(ymin = LB, ymax = UB),
   #             alpha = 0.5) + 
-  geom_errorbar(aes(ymin = LB, ymax = UB), alpha = 0.5) +
+  geom_errorbar(aes(ymin = LB, ymax = UB), col = "darkgray") +
+  geom_point() +
   geom_hline(yintercept = 1, lty = 2) + 
   scale_x_continuous(TeX("Distance (m), d_2"),
                      breaks = seq(0,1000,by = 100),
@@ -117,8 +120,9 @@ p3 <- perm_c %>%
 
 ggarrange(p2, p3, ncol = 1, labels = "AUTO")
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-concentric-plot-perm-boot.png")),
-       device = "png",
+                       paste0(Sys.Date(), "_overall-tau-concentric-plot-perm-boot.eps")),
+       device = "eps",
+       dpi = 300,
        width = 8,
        height = 6,
        units = "in")

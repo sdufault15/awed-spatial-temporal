@@ -168,7 +168,7 @@ temp <- names(ones_row)[which(ones_row == 1)]
 temp_2 <- names(ones_col[which(ones_col == 1)])
 m300 <- tm_shape(Yogya_Adm_1) + 
   tm_polygons(col = "Intervention",
-              alpha = 0.75,
+              # alpha = 0.75,
               palette = c("lightgray", "white")) + 
   tm_text(text = "New_Clustr") +
   tm_shape(subset(CRTND_VCD_data_SPDF, participant_id %in% unique(c(temp, temp_2)))) +
@@ -191,7 +191,8 @@ m300 <- tm_shape(Yogya_Adm_1) +
             legend.text.size = 1)
 
 tmap_save(tm = m300,
-          filename = here("graphs", paste0(Sys.Date(), "_homotypic-vcd-graphs-300.png")),
+          filename = here("graphs", paste0(Sys.Date(), "_homotypic-vcd-graphs-300.eps")),
           width = 7,
           height = 8.85,
+          dpi = 300,
           units = "in")

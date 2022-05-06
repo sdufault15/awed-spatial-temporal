@@ -260,8 +260,9 @@ ggarrange(all_int,
           all_unt,
           ncol = 1)
 ggsave(filename = here("graphs", 
-                       paste0(Sys.Date(), "_forestplot-plus-one.png")),
-       device = "png",
+                       paste0(Sys.Date(), "_forestplot-plus-one.eps")),
+       device = "eps",
+       dpi = 300,
        height = 8,
        width = 9,
        units = "in")
