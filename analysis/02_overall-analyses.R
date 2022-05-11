@@ -67,8 +67,8 @@ ggpubr::ggarrange(p1, p2,
                   labels = "AUTO",
                   align = "hv")
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-dual-plot.eps")),
-       device = "eps",
+                       paste0(Sys.Date(), "_overall-tau-dual-plot.pdf")),
+       device = "pdf",
        dpi = 300,
        width = 6,
        height = 6,
@@ -76,8 +76,8 @@ ggsave(filename = here("graphs",
 
 p2
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-concentric-plot.eps")),
-       device = "eps",
+                       paste0(Sys.Date(), "_overall-tau-concentric-plot.pdf")),
+       device = "pdf",
        dpi = 300,
        width = 6,
        height = 4,
@@ -85,8 +85,8 @@ ggsave(filename = here("graphs",
 
 p1
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-radii-plot.eps")),
-       device = "eps",
+                       paste0(Sys.Date(), "_overall-tau-radii-plot.pdf")),
+       device = "pdf",
        dpi = 300,
        width = 6,
        height = 4,
@@ -120,8 +120,8 @@ p3 <- perm_c %>%
 
 ggarrange(p2, p3, ncol = 1, labels = "AUTO")
 ggsave(filename = here("graphs",
-                       paste0(Sys.Date(), "_overall-tau-concentric-plot-perm-boot.eps")),
-       device = "eps",
+                       paste0(Sys.Date(), "_overall-tau-concentric-plot-perm-boot.pdf")),
+       device = "pdf",
        dpi = 300,
        width = 8,
        height = 6,

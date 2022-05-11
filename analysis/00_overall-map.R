@@ -138,7 +138,7 @@ p_rr <- tm_shape(Yogya_Adm_1) +
 all <- tmap_arrange(map_dots, map_tpf, p_rr)
 
 tmap_save(tm = all,
-          filename = here("graphs", paste0(Sys.Date(), "_overall-denv-tmap.eps")),
+          filename = here("graphs", paste0(Sys.Date(), "_overall-denv-tmap.pdf")),
           width = 17.5,
           height = 7.5,
           dpi = 600,

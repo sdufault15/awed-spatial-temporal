@@ -191,7 +191,7 @@ m300 <- tm_shape(Yogya_Adm_1) +
             legend.text.size = 1)
 
 tmap_save(tm = m300,
-          filename = here("graphs", paste0(Sys.Date(), "_homotypic-vcd-graphs-300.eps")),
+          filename = here("graphs", paste0(Sys.Date(), "_homotypic-vcd-graphs-300.pdf")),
           width = 7,
           height = 8.85,
           dpi = 300,
